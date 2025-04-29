@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Aliases for git bash -->
+    <div class="awesome" style="border: 1px solid red">
+      <label for="name">Enter your name: </label>
+      <input type="text" id="name" />
+    </div>
+    <p>Enter your HTML here</p>
+    <div>
+      <h1>Aliases for terminal / git bash</h1>
+
+      <h4><code>sudo nano ~/.bashrc &amp;&amp; source ~/.bashrc</code></h4>
+
+      <pre><code># =================================================================================
+  #       ALIASES
+  # =================================================================================
+  
+  # ---------------------------------------------------------------------------------
+  # GAC: Alt+G = Pre-fill commit message | Alt + G
+  # ---------------------------------------------------------------------------------
+  git_add_commit_prefill() {
+    READLINE_LINE=&quot;git add . &amp;&amp; git commit -m &#39;&#39;&quot;
+    READLINE_POINT=28
+  }
+  bind -x &#39;&quot;\eg&quot;:git_add_commit_prefill&#39;
+  
+  # ---------------------------------------------------------------------------------
+  # GAC: Typed command `gac`
+  # ---------------------------------------------------------------------------------
+  gac() {
+    git add .
+    echo &quot;Enter commit message:&quot;
+    read -r msg
+    git commit -m &quot;$msg&quot;
+  }
+  
+  # ---------------------------------------------------------------------------------
+  # GACP: Alt+V or type `gacp`| Alt + V
+  # ---------------------------------------------------------------------------------
+  gacp() {
+    read -e -p &quot;Commit message: &quot; msg &amp;&amp; git add . &amp;&amp; git commit -m &quot;$msg&quot; &amp;&amp; git push
+  }
+  bind -x &#39;&quot;\ev&quot;:gacp&#39;
+  
+  # ---------------------------------------------------------------------------------
+  # Git alias - git push - `gp`
+  # ---------------------------------------------------------------------------------
+  alias gp=&#39;git push&#39;
+  
+  # ---------------------------------------------------------------------------------
+  # GCMM: Merge current branch into `main` | Alt + M
+  # ---------------------------------------------------------------------------------
+  gcmm() {
+    current_branch=$(git symbolic-ref --short HEAD)
+  
+    if [ &quot;$current_branch&quot; = &quot;main&quot; ]; then
+      echo &quot;You&#39;re already on &#39;main&#39;. Cannot merge &#39;main&#39; into itself.&quot;
+      return 1
+    fi
+  
+    echo &quot;Merging &#39;$current_branch&#39; into &#39;main&#39;...&quot;
+    git checkout main &amp;&amp; git merge &quot;$current_branch&quot;
+  }
+  
+  # Alt + M to trigger
+  bind -x &#39;&quot;\em&quot;:gcmm&#39;
+  
+  # ---------------------------------------------------------------------------------
+  # NRD: npm run dev | Alt + D
+  # ---------------------------------------------------------------------------------
+  
+  # ---------------------------------------------------------------------------------
+  # VTD: execute script to create vite project w.tailwind/daisyUI
+  # ---------------------------------------------------------------------------------
+  
+  # ---------------------------------------------------------------------------------
+  # GHRC: gh repo create --remote | Alt + R
+  # ---------------------------------------------------------------------------------
+  # execute gh repo create &lt;name&gt; --private --source=. --remote=origin --push
+  ghrc() {
+    read -e -p &quot;Repo Name: &quot; msg &amp;&amp; gh repo create &quot;$msg&quot; --private --source=. --remote=origin --push
+  }
+  
+  bind -x &#39;&quot;\er&quot;:ghrc&#39;
+  
+  # =================================================================================
+  #       End ALIASES
+  # =================================================================================</code></pre>
+    </div>
+  </body>
+</html>
