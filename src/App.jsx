@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <img src="./hate.png" alt="Hass!" className="mx-auto" />
-      {/* <h1 className="text-6xl">kai + React:</h1> */}
+      {/* <h1 className="text-3xl">kai + React:</h1> */}
 
       <div className=" flex-1/2 p-10">
         <button onClick={handleClick} className="btn btn-primary">
