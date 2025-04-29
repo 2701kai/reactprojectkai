@@ -10,7 +10,7 @@ const TerminalAliases = () => {
           <code>sudo nano ~/.bashrc &amp;&amp; source ~/.bashrc</code>
         </h4>
         <br />
-        <pre className="py-8 text-stone-50 bg-stone-900 rounded-lg">
+        <pre className="p-4 text-sm text-stone-50 bg-stone-900 rounded-lg">
           <code>
             #
             =================================================================================
@@ -92,8 +92,8 @@ const TerminalAliases = () => {
             {"\n"}# execute gh repo create &lt;name&gt; --private --source=.
             --remote=origin --push{"\n"}ghrc() {"{"}
             {"\n"}
-            {"  "}read -e -p "Repo Name: " msg &amp;&amp; gh repo create "$msg"
-            --private --source=. --remote=origin --push{"\n"}
+            {"  "}read -e -p "Repo Name: " msg &amp;&amp;{"\n"} gh repo create
+            "$msg" --private --source=. --remote=origin --push{"\n"}
             {"}"}
             {"\n"}
             {"\n"}bind -x '"\er":ghrc'{"\n"}
