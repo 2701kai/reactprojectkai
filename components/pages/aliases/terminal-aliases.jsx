@@ -10,7 +10,7 @@ const TerminalAliases = () => {
           <code>sudo nano ~/.bashrc &amp;&amp; source ~/.bashrc</code>
         </h4>
         <br />
-        <pre className="p-4 text-sm text-stone-50 bg-stone-900 rounded-lg">
+        <pre className="p-4 text-sm text-green-500 bg-stone-900 rounded-lg">
           <code>
             #
             =================================================================================
