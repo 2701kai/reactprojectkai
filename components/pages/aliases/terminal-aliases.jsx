@@ -7,11 +7,13 @@ const TerminalAliases = () => {
       <div className="p-10 px-4 py-2 flex flex-col items-center justify-center min-h-screen">
         <h2 className="text-xl m-8">Aliases for terminal / git bash</h2>
         <h4>
-          <code>sudo nano ~/.bashrc &amp;&amp; source ~/.bashrc</code>
+          <code className="text-accent">
+            sudo nano ~/.bashrc &amp;&amp; source ~/.bashrc
+          </code>
         </h4>
         <br />
-        <pre className="p-4 text-sm text-green-500 bg-stone-900 rounded-lg">
-          <code>
+        <pre className="p-4 text-sm text-green-500 bg-stone-900 rounded-lg text-left mx-auto">
+          <code text="bash" className="font-mono">
             #
             =================================================================================
             {"\n"}#{"       "}ALIASES{"\n"}#
