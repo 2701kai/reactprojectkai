@@ -67,4 +67,46 @@ npm i -D daisyui@latest
 
 ```
 
+then
+
+```css
+/* index.css */
+@import "tailwindcss";
+@plugin "daisyui";
+```
+
+---
+
+### toaster
+
+```bash
+npm i react-hot-toast
+```
+
+```jsx
+// main.jsx:
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { Toaster } from "react-hot-toast";
+import "./index.css";
+import App from "./App.jsx";
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <>
+      <App />
+      <Toaster position="bottom-center" />
+    </>
+  </StrictMode>
+);
+```
+
+---
+
+### confetti
+
+```bash
+npm i canvas-confetti
+```
+
 ---
