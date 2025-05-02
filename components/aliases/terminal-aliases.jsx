@@ -101,7 +101,7 @@ const TerminalAliases = () => {
         </h4>
         <button
           onClick={handleCopy}
-          className="btn text-emerald-900 opacity-80 hover:bg-emerald-800 text-white"
+          className="btn text-emerald-900 hover:bg-emerald-950 hover:text-success"
         >
           Copy All
         </button>
