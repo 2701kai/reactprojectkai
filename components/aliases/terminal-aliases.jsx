@@ -91,7 +91,7 @@ const TerminalAliases = () => {
   };
 
   return (
-    <div className="flex-1/2 px-4 py-8">
+    <div className="w-full px-4 py-8 max-w-screen-lg mx-auto">
       <div className="text-center flex flex-col items-center space-y-4 mb-6">
         <h2 className="text-xl">Aliases for terminal / git bash</h2>
         <h4>
@@ -107,7 +107,7 @@ const TerminalAliases = () => {
         </button>
       </div>
 
-      <pre className="p-4 text-sm text-green-500 bg-stone-900 rounded-lg overflow-auto w-full max-w-full text-left">
+      <pre className="p-4 text-sm text-green-500 bg-stone-900 rounded-lg overflow-x-auto w-full max-w-full text-left">
         <code className="font-mono whitespace-pre">{aliasesText}</code>
       </pre>
     </div>
