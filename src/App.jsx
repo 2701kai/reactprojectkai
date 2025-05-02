@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <div className="text-center flex flex-col items-center justify-center space-y-6">
-        <img src="./hate.png" alt="Hass!" />
+        <img src="./hate.png" alt="Hass!" onClick={launchConfetti} />
         <img
           src={reactLogo}
           onClick={launchConfetti}
