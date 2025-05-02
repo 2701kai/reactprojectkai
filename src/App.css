@@ -61,3 +61,7 @@
 /* .logo.react:hover {
   animation: none;
 } */
+
+.confetti:hover {
+  animation: logo-pulse 2s infinite ease-in-out;
+}
