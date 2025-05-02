@@ -1,31 +1,43 @@
+import confetti from "canvas-confetti";
 import "./App.css";
 import { useState } from "react";
-import TerminalAliases from "../components/pages/aliases/terminal-aliases";
+import reactLogo from "./assets/react.svg";
+
+import TerminalAliases from "../components/aliases/terminal-aliases";
 
 function App() {
   const [showAliases, setShowAliases] = useState(false);
-  const handleClick = () => {
-    setShowAliases(true);
+
+  const toggleAliases = () => {
+    setShowAliases((prev) => !prev);
+  };
+
+  const launchConfetti = () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
   };
 
   return (
     <>
-      <img src="./hate.png" alt="Hass!" className="mx-auto" />
-      {/* <h1 className="text-3xl">kai + React:</h1> */}
-
-      <div className=" flex-1/2 p-10">
-        <button onClick={handleClick} className="btn btn-primary">
-          Show Terminal Aliases
+      <div className="text-center flex flex-col items-center justify-center space-y-6">
+        <img src="./hate.png" alt="Hass!" />
+        <img
+          src={reactLogo}
+          onClick={launchConfetti}
+          className="logo react"
+          alt="React logo"
+        />
+        <button onClick={toggleAliases} className="btn btn-primary">
+          {showAliases ? "Hide Terminal Aliases" : "Show Terminal Aliases"}
         </button>
 
         {showAliases && <TerminalAliases />}
       </div>
 
-      <img src="react-whaaat-s.webp" alt="Whaaaat?" className="mx-auto" />
-
-      {/* <div className="flex justify-center items-center min-h-screen">
-        <img src="react-whaat-xxl.webp" alt="Whaaaat?" />
-      </div> */}
+      <img src="react-whaaat-s.webp" alt="Whaaaat?" className="mx-auto py-8" />
     </>
   );
 }

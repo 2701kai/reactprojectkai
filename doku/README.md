@@ -23,7 +23,7 @@ _looove that shadow, by the way:_
 
 ### CSS: adding tailwind + daisy UI
 
-> see [tailwind + vite](https://tailwindcss.com/docs/installation/using-vite)
+> see [tailwind + vite](https://tailwindcss.com/docs/installation/using-vite) and [daisyUI](https://daisyui.com/docs/install/).
 
 ```bash
 npm install tailwindcss @tailwindcss/vite
@@ -66,3 +66,5 @@ whatever. proceed..
 npm i -D daisyui@latest
 
 ```
+
+---

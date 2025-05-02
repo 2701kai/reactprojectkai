@@ -1,5 +1,7 @@
 # Aliases for terminal / git bash
 
+![alt text](image.png)
+
 #### `sudo nano ~/.bashrc && source ~/.bashrc`
 
 ```bash
